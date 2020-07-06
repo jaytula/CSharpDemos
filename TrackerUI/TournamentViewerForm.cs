@@ -17,5 +17,14 @@ namespace TrackerUI
             InitializeComponent();
         }
 
+        private void matchupListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TournamentViewerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
