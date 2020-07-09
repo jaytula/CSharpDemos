@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  consoleapp:
+    image: ${DOCKER_REGISTRY-}consoleapp
+    build:
+      context: .
+      dockerfile: ConsoleApp/Dockerfile
+  mssql:
+    image: "mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-16.04"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "myStrong!PassWord"
+    ports:
+      - '1433:1433'
+    

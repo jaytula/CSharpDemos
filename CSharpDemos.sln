@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerLibrary", "TrackerLibrary\TrackerLibrary.csproj", "{3001DDC3-B19F-4147-A247-D5A089104970}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerLibrary", "TrackerLibrary\TrackerLibrary.csproj", "{3001DDC3-B19F-4147-A247-D5A089104970}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerUI", "TrackerUI\TrackerUI.csproj", "{B6011931-E9D8-424B-98A5-C7CDAE6AC8BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerUI", "TrackerUI\TrackerUI.csproj", "{B6011931-E9D8-424B-98A5-C7CDAE6AC8BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{4E6B7437-0D58-4A09-8906-0DC73E33804C}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{390FD767-B269-47EA-B50A-F7D7B47C3DBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{B6011931-E9D8-424B-98A5-C7CDAE6AC8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6011931-E9D8-424B-98A5-C7CDAE6AC8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6011931-E9D8-424B-98A5-C7CDAE6AC8BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6B7437-0D58-4A09-8906-0DC73E33804C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6B7437-0D58-4A09-8906-0DC73E33804C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6B7437-0D58-4A09-8906-0DC73E33804C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6B7437-0D58-4A09-8906-0DC73E33804C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390FD767-B269-47EA-B50A-F7D7B47C3DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390FD767-B269-47EA-B50A-F7D7B47C3DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390FD767-B269-47EA-B50A-F7D7B47C3DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390FD767-B269-47EA-B50A-F7D7B47C3DBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
