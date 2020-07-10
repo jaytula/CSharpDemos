@@ -61,6 +61,14 @@ BEGIN
 END
 ```
 
+**Run stored procedure**
+
+```sql
+exec dbo.spTestPerson_GetByLastName 'Corey'
+```
+
 #### Issues
 
 https://github.com/microsoft/mssql-docker/issues/136
+
+### 9. Prize Form Wire Up: https://www.youtube.com/watch?v=5oHfcyrlHeE
