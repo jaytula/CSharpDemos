@@ -45,3 +45,8 @@ GO
 - right click on particular Table and Design
 - Edit Top 200 Rows when right-click on Table to modify/insert rows
 - Identity Specification set to Yes for primary key field
+
+
+#### Issues
+
+https://github.com/microsoft/mssql-docker/issues/136
