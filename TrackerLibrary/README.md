@@ -46,6 +46,20 @@ GO
 - Edit Top 200 Rows when right-click on Table to modify/insert rows
 - Identity Specification set to Yes for primary key field
 
+**Stored Procedures Example**
+
+```
+CREATE PROCEDURE dbo.spTestPerson_GetByLastName
+  @LastName nvarchar(100)
+AS
+BEGIN
+  SET NOCOUNT ON;
+
+  select *
+  from dbo.TestPerson
+  where LastName = @LastName;
+END
+```
 
 #### Issues
 
