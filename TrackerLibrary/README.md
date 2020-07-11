@@ -72,3 +72,31 @@ exec dbo.spTestPerson_GetByLastName 'Corey'
 https://github.com/microsoft/mssql-docker/issues/136
 
 ### 9. Prize Form Wire Up: https://www.youtube.com/watch?v=5oHfcyrlHeE
+
+**Pseudocode**
+
+```
+if (usingSQL == true)
+{
+  open database connection
+  save the data
+  get back the update model
+}
+
+if (usingTextFile == true)
+{
+  open text file
+  generate id
+  save the data
+}
+```
+
+#### Questions
+
+- How do we get that connection information?
+- How do we connect to two different data sources to the same task?
+
+**Notes**
+
+- Static class for the data source info
+- Interface for data sources
