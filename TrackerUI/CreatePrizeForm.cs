@@ -14,5 +14,17 @@ namespace TrackerUI
         {
             InitializeComponent();
         }
+
+        private void createPrizeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool ValidateForm()
+        {
+            bool output = true;
+
+            return output;
+        }
     }
 }
