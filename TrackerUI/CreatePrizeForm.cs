@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using TrackerLibrary;
 
 namespace TrackerUI
 {
@@ -17,7 +18,12 @@ namespace TrackerUI
 
         private void createPrizeButton_Click(object sender, EventArgs e)
         {
-
+            if(ValidateForm())
+            {
+                PrizeModel model = new PrizeModel();
+                model.PlaceName = placeNameValue.Text;
+                model.PlaceNumber = placeNumberLabel.Text;
+            }
         }
 
         private bool ValidateForm()
@@ -43,9 +49,9 @@ namespace TrackerUI
             }
 
             decimal prizeAmount = 0;
-            int prizePercentage = 0;
+            double prizePercentage = 0;
             bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out prizeAmount);
-            bool prizePercentageValid = int.TryParse(prizePercentageValue.Text, out prizePercentage)
+            bool prizePercentageValid = double.TryParse(prizePercentageValue.Text, out prizePercentage)
 
             if(!prizeAmountValid || !prizePercentageValid)
             {
