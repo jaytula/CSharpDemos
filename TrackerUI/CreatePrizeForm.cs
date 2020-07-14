@@ -24,6 +24,19 @@ namespace TrackerUI
         {
             bool output = true;
 
+            int placeNumber = 0;
+            bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out placeNumber);
+
+            if (!placeNumberValidNumber)
+            {
+                output = false;
+            }
+
+            if (placeNumber < 1)
+            {
+                output = false;
+            }
+
             return output;
         }
     }
