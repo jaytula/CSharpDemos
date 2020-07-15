@@ -100,3 +100,5 @@ if (usingTextFile == true)
 
 - Static class for the data source info
 - Interface for data sources
+
+### 10. SQL Connection: https://www.youtube.com/watch?v=WGbTM198-eA
