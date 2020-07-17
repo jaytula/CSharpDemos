@@ -22,7 +22,8 @@ namespace TrackerUI
             // Initialize the database connections
             TrackerLibrary.GlobalConfig.InitializeConections(true, true);
 
-            Debug.WriteLine("ABC");
+            string dburi = Environment.GetEnvironmentVariable("DBURI");
+            Debug.WriteLine(dburi);
             //Application.Run(new TournamentDashboardForm());
             Application.Run(new CreatePrizeForm());
 

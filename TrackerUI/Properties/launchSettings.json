@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TrackerUI": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DBURI": "test-db-creds"
+      }
+    }
+  }
+}
