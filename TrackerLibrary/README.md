@@ -102,3 +102,7 @@ if (usingTextFile == true)
 - Interface for data sources
 
 ### 10. SQL Connection: https://www.youtube.com/watch?v=WGbTM198-eA
+
+#### Table schema diagram info
+
+https://www.youtube.com/watch?v=6ixfTsrhPgM  2:24 in
