@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TrackerLibrary": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DBURI": "dburi_000"
+      }
+    }
+  }
+}

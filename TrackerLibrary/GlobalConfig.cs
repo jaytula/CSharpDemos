@@ -24,5 +24,10 @@ namespace TrackerLibrary
                 Connections.Add(text);
             }
         }
+
+        public static string CnnString(string name)
+        {
+            return Environment.GetEnvironmentVariable(name);
+        }
     }
 }
