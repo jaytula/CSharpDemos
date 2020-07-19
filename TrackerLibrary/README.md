@@ -128,3 +128,7 @@ BEGIN
 END
 GO
 ```
+
+#### Connection String
+
+https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=dotnet-plat-ext-3.1
