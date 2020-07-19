@@ -106,3 +106,25 @@ if (usingTextFile == true)
 #### Table schema diagram info
 
 https://www.youtube.com/watch?v=6ixfTsrhPgM  2:24 in
+
+#### Create stored procedure spPrizes_Insert
+
+```sql
+CREATE PROCEDURE dbo.spPrizes_Insert
+	@PlaceNumber int,
+	@PlaceName nvarchar(50),
+	@PrizeAmount money,
+	@PrizePercentage float,
+	@id int = 0 output
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	INSERT INTO dbo.Prizes (PlaceNumber, PlaceName, PrizeAmount, PrizePercentage)
+	VALUES (@PlaceNumber, @PlaceName, @PrizeAmount, @PrizePercentage);
+
+	SELECT @id = SCOPE_IDENTITY();
+END
+GO
+```
