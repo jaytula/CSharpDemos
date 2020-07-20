@@ -21,7 +21,7 @@ namespace TrackerUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Initialize the database connections
-            TrackerLibrary.GlobalConfig.InitializeConections(true, true);
+            TrackerLibrary.GlobalConfig.InitializeConnections("sql");
 
             string dburi = Environment.GetEnvironmentVariable("DBURI");
             Debug.WriteLine(dburi);
