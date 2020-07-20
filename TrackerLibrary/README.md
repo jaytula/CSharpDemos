@@ -136,3 +136,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.
 **Info on SqlConnectionStringBuilder**
 
 https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder?view=dotnet-plat-ext-3.1
+
+### 11. Text Connection: https://www.youtube.com/watch?v=X_P70uukPrU
+
+TC sets global setting `filePath` to `c:\data\TournamentTracker`
