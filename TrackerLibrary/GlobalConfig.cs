@@ -32,7 +32,9 @@ namespace TrackerLibrary
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             Debug.WriteLine(builder.ConnectionString);
             builder.ConnectionString = "server=(local);user id=ab;" + "password= a!Pass113;initial catalog=AdventureWorks";
-            builder.Password = "xyz";
+            builder.UserID = "sa";
+            builder.InitialCatalog = "Tournaments";
+            builder.Password = "myStrong!PassWord";
             return builder.ConnectionString;
         }
     }
