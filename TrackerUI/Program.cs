@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
 
 namespace TrackerUI
 {
@@ -24,6 +25,7 @@ namespace TrackerUI
 
             string dburi = Environment.GetEnvironmentVariable("DBURI");
             Debug.WriteLine(dburi);
+            Debug.WriteLine(GlobalConfig.CnnString(""));
             //Application.Run(new TournamentDashboardForm());
             Application.Run(new CreatePrizeForm());
 

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Text;
 using TrackerLibrary.DataAccess;
 
@@ -27,7 +29,11 @@ namespace TrackerLibrary
 
         public static string CnnString(string name)
         {
-            return Environment.GetEnvironmentVariable(name);
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            Debug.WriteLine(builder.ConnectionString);
+            builder.ConnectionString = "server=(local);user id=ab;" + "password= a!Pass113;initial catalog=AdventureWorks";
+            builder.Password = "xyz";
+            return builder.ConnectionString;
         }
     }
 }

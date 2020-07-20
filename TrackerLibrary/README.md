@@ -132,3 +132,7 @@ GO
 #### Connection String
 
 https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=dotnet-plat-ext-3.1
+
+**Info on SqlConnectionStringBuilder**
+
+https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder?view=dotnet-plat-ext-3.1
