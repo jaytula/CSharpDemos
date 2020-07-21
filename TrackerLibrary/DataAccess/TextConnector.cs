@@ -16,6 +16,7 @@ namespace TrackerLibrary.DataAccess
             // Add the new record the new ID
             // Convert the prizes to list<string>
             // Save the list<string> to the text file
+            return model;
         }
     }
 }
