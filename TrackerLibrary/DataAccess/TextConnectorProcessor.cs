@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using TrackerLibrary.Models;
 
 // * Load the text file
 // Convert the text to List<PrizeModel>
@@ -27,6 +29,20 @@ namespace TrackerLibrary.DataAccess.TextConnector
                 return new List<string>();
             }
             return File.ReadAllLines(file).ToList();
+        }
+
+        public static List<PrizeModel> ConvertToPrizeModels(this List<string> lines)
+        {
+            List<PrizeModel> output = new List<PrizeModel>();
+
+            foreach (string line in lines)
+            {
+                string[] cols = line.Split(',');
+                PrizeModel p = new PrizeModel();
+                p.Id = int.Parse(cols[0]);
+                p.PlaceNumber = int.Parse(cols[1]);
+                p.PlaceNumber = cols[2];
+            }
         }
     }
 }
