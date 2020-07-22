@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
 
-// Load the text file
+// * Load the text file
 // Convert the text to List<PrizeModel>
 // find the max ID
 // Add the new record the new ID
@@ -20,7 +22,11 @@ namespace TrackerLibrary.DataAccess.TextConnector
         }
         public static List<string> LoadFile(this string file)
         {
-
+            if(!File.Exists(file))
+            {
+                return new List<string>();
+            }
+            return File.ReadAllLines(file).ToList();
         }
     }
 }
