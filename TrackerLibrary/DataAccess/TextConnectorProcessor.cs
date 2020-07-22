@@ -7,7 +7,7 @@ using System.Text;
 using TrackerLibrary.Models;
 
 // * Load the text file
-// Convert the text to List<PrizeModel>
+// * Convert the text to List<PrizeModel>
 // find the max ID
 // Add the new record the new ID
 // Convert the prizes to list<string>
@@ -41,8 +41,13 @@ namespace TrackerLibrary.DataAccess.TextConnector
                 PrizeModel p = new PrizeModel();
                 p.Id = int.Parse(cols[0]);
                 p.PlaceNumber = int.Parse(cols[1]);
-                p.PlaceNumber = cols[2];
+                p.PlaceName = cols[2];
+                p.PrizeAmount = decimal.Parse(cols[3]);
+                p.PrizePercentage = double.Parse(cols[4]);
+                output.Add(p);
             }
+
+            return output;
         }
     }
 }
