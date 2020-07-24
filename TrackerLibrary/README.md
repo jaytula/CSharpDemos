@@ -142,3 +142,13 @@ https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnections
 TC sets global setting `filePath` to `c:\data\TournamentTracker`
 
 ### 12. Create Team Form: https://www.youtube.com/watch?v=AB0MJkbFEYg&frags=pl%2Cwn
+
+#### People table
+
+| name | type | allow null |
+| --- | --- |
+| Id | int | |
+| FirstName | nvarchar(100) | |
+| LastName | nvarchar(100) | |
+| EmailAddress | nvarchar(100) | |
+| CellphoneNumber | varchar(20) | yes |
