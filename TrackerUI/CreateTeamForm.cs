@@ -18,6 +18,21 @@ namespace TrackerUI
         public CreateTeamForm()
         {
             InitializeComponent();
+
+            WireUpLists();
+        }
+
+        private void CreateSampleData()
+        {
+
+        }
+        private void WireUpLists()
+        {
+            selectTeamMemberDropDown.DataSource = availableTeamMembers;
+            selectTeamMemberDropDown.DisplayMember = "FullName";
+
+            teamMembersListBox.DataSource = selectedTeamMembers;
+            teamMembersListBox.DisplayMember = "FullName";
         }
 
         private void CreateTeamForm_Load(object sender, EventArgs e)
