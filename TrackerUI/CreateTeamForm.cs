@@ -19,12 +19,17 @@ namespace TrackerUI
         {
             InitializeComponent();
 
+            // CreateSampleData();
             WireUpLists();
         }
 
         private void CreateSampleData()
         {
+            availableTeamMembers.Add(new PersonModel { FirstName = "Tim", LastName = "Corey" });
+            availableTeamMembers.Add(new PersonModel { FirstName = "Sue", LastName = "Storm" });
 
+            selectedTeamMembers.Add(new PersonModel { FirstName = "Jane", LastName = "Smith" });
+            selectedTeamMembers.Add(new PersonModel { FirstName = "Bill", LastName = "Jones" });
         }
         private void WireUpLists()
         {
