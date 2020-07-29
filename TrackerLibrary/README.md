@@ -234,3 +234,19 @@ GO
 ```
 
 ### 13. Create Team Form Part 2 https://www.youtube.com/watch?v=QTdfiZpoabk
+
+TODO: Create Prodedure spPeople_GetAll
+
+```sql
+CREATE PROCEDURE dbo.spPeople_GetAll
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT FirstName, LastName, EmailAddress, CellphoneNumber) FROM dbo.People;
+END
+GO
+```
