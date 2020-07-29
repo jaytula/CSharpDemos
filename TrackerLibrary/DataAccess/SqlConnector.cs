@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Text;
 using TrackerLibrary.Models;
 
@@ -55,10 +56,13 @@ namespace TrackerLibrary.DataAccess
 
         public List<PersonModel> GetPerson_All()
         {
+            List<PersonModel> output;
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("DBURL")))
             {
-
+                output = connection.Query<PersonModel>("dbo.spPeople_GetAll").ToList();
             }
+
+            return output;
         }
     }
 }
