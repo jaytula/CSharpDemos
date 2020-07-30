@@ -280,3 +280,23 @@ CREATE TABLE [dbo].[Teams](
 ) ON [PRIMARY]
 GO
 ```
+
+**Store Procedure**
+
+```sql
+CREATE PROCEDURE dbo.spTeams_Insert
+	@TeamName nvarchar(100),
+	@id int = 0 output
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	INSERT INTO dbo.Teams (TeamName) VALUES (@TeamName);
+
+	SELECT @id = SCOPE_IDENTITY();
+END
+GO
+```
