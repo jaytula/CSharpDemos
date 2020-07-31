@@ -300,3 +300,20 @@ BEGIN
 END
 GO
 ```
+
+```sql
+CREATE PROCEDURE spTeamMembers_Insert
+	@TeamId int,
+	@PersonId int,
+	@id int = 0 output
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	INSERT INTO dbo.TeamMembers (TeamId, PersonId) VALUES (@TeamId, @PersonId);
+
+	select @id = SCOPE_IDENTITY();
+END
+GO
+```
