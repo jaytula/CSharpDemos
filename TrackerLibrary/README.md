@@ -198,9 +198,9 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[TeamMembers](
-	[id] [int] NOT NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
 	[TeamId] [int] NOT NULL,
-	[PersonId] [int] IDENTITY(1,1) NOT NULL,
+	[PersonId] [int] NOT NULL,
  CONSTRAINT [PK_TeamMembers] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
