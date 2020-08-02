@@ -246,7 +246,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT FirstName, LastName, EmailAddress, CellphoneNumber FROM dbo.People;
+	SELECT Id, FirstName, LastName, EmailAddress, CellphoneNumber FROM dbo.People;
 END
 GO
 ```
