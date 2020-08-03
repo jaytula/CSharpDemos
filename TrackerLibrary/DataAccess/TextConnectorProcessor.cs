@@ -69,6 +69,17 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             return output;
         }
 
+        public static List<TeamModel> ConvertToTeamModels(this List<string> lines)
+        {
+            // id,team-name,list of ids separated by the pipe
+            // 3,Tim's Team,1|3|5
+
+            List<TeamModel> output = new List<TeamModel>();
+
+
+            return output;
+        }
+
         public static void SaveToPrizeFile(this List<PrizeModel> models, string fileName)
         {
             List<string> lines = new List<string>();
