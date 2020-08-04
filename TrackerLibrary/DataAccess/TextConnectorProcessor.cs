@@ -24,7 +24,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
         }
         public static List<string> LoadFile(this string file)
         {
-            if(!File.Exists(file))
+            if (!File.Exists(file))
             {
                 return new List<string>();
             }
@@ -121,7 +121,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             List<string> lines = new List<string>();
             foreach (TeamModel t in models)
             {
-                lines.Add($"{t.Id},{t.TeamName},{t.TeamMembers}");
+                lines.Add($"{t.Id},{t.TeamName},{ConvertPeopleListToString(t.TeamMembers)}");
             }
             File.WriteAllLines(fileName.FullFilePath(), lines);
         }
@@ -129,6 +129,11 @@ namespace TrackerLibrary.DataAccess.TextHelpers
         private static string ConvertPeopleListToString(List<PersonModel> people)
         {
             string output = "";
+
+            if (people.Count == 0)
+            {
+                return "";
+            }
 
             foreach (PersonModel p in people)
             {
