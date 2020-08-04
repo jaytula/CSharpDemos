@@ -56,7 +56,24 @@ namespace TrackerLibrary.DataAccess
 
         public TeamModel CreateTeam(TeamModel model)
         {
-            List<TeamModel> teams = TeamFile.FullFilePath().LoadFile().ConvertToTeamModels();
+            List<TeamModel> teams = TeamFile.FullFilePath().LoadFile().ConvertToTeamModels(PeopleFile);
+
+            // find the max ID
+            int currentId = 1;
+            if (teams.Count > 0)
+            {
+                currentId = teams.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+            model.Id = currentId;
+
+            // Add the new record the new ID
+            teams.Add(model);
+
+            // Convert the prizes to list<string>
+            // Save the list<string> to the text file
+            teams.SaveToTeamFile(TeamFile);
+
+            return model;
         }
 
         public List<PersonModel> GetPerson_All()
