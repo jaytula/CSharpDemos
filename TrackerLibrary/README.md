@@ -319,3 +319,31 @@ GO
 ```
 
 ### 15. Create Tournament Part 1 https://www.youtube.com/watch?v=gpCrmbZR9yE
+
+**Store Prodedure**
+
+```sql
+CREATE PROCEDURE [dbo].[spTeam_GetAll]
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT id, TeamName FROM dbo.Teams;
+END
+GO
+```
+
+```sql
+CREATE PROCEDURE dbo.spTeamMembers_GetByTeam
+  @TeamId int
+AS
+BEGIN
+  SET NOCOUNT ON;
+
+  SELECT p.*
+  FROM dbo.TeamMembers m
+  INNER JOIN dbo.People p ON m.PersonId = p.id
+  WHERE m.TeamId = @TeamId;
+END
+```

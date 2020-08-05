@@ -92,7 +92,13 @@ namespace TrackerLibrary.DataAccess
 
         public List<TeamModel> GetTeam_All()
         {
-            throw new NotImplementedException();
+            List<TeamModel> output;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("DBURL")))
+            {
+                output = connection.Query<TeamModel>("dbo.spTeam_GetAll").ToList();
+            }
+
+            return output;
         }
     }
 }
