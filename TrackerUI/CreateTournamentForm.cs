@@ -23,5 +23,11 @@ namespace TrackerUI
         {
 
         }
+
+        private void InitializeLists()
+        {
+            selectTeamDropDown.DataSource = availableTeams;
+            selectTeamDropDown.DisplayMember = "TeamName";
+        }
     }
 }

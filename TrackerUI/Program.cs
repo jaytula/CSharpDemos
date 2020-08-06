@@ -21,13 +21,13 @@ namespace TrackerUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Initialize the database connections
-            TrackerLibrary.GlobalConfig.InitializeConnections(DatabaseType.TextFile);
+            TrackerLibrary.GlobalConfig.InitializeConnections(DatabaseType.Sql);
 
             string dburi = Environment.GetEnvironmentVariable("DBURI");
             Debug.WriteLine(dburi);
             Debug.WriteLine(GlobalConfig.CnnString(""));
-            //Application.Run(new TournamentDashboardForm());
-            Application.Run(new CreateTeamForm());
+            Application.Run(new CreateTournamentForm());
+            // Application.Run(new CreateTeamForm());
 
         }
     }
