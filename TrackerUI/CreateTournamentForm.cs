@@ -17,6 +17,7 @@ namespace TrackerUI
         public CreateTournamentForm()
         {
             InitializeComponent();
+            InitializeLists();
         }
 
         private void label1_Click(object sender, EventArgs e)
