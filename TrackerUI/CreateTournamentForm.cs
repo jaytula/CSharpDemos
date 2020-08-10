@@ -46,7 +46,7 @@ namespace TrackerUI
         {
             TeamModel t = (TeamModel)selectTeamDropDown.SelectedItem;
 
-            if(t != null)
+            if (t != null)
             {
                 availableTeams.Remove(t);
                 selectedTeams.Add(t);
@@ -82,6 +82,18 @@ namespace TrackerUI
         {
             CreateTeamForm frm = new CreateTeamForm(this);
             frm.Show();
+        }
+
+        private void removeSelectedPlayerButton_Click(object sender, EventArgs e)
+        {
+            TeamModel t = (TeamModel)tournamentTeamsListBox.SelectedItem;
+
+            if (t != null)
+            {
+                selectedTeams.Remove(t);
+                availableTeams.Add(t);
+                WireUpLists();
+            }
         }
     }
 }
