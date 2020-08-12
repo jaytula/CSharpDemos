@@ -107,5 +107,15 @@ namespace TrackerUI
                 WireUpLists();
             }
         }
+
+        private void createTournamentButton_Click(object sender, EventArgs e)
+        {
+            // Create Tournament Entry
+            // Create all of the prizes entries
+            // Create all of team etnries
+
+            // Create our matchups
+
+        }
     }
 }

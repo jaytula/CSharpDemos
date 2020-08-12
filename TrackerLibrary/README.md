@@ -347,3 +347,58 @@ BEGIN
   WHERE m.TeamId = @TeamId;
 END
 ```
+
+### 17. Create Tournament Part 3 https://www.youtube.com/watch?v=bpPBPi4laEM
+
+#### Tournaments table
+
+| name | type |
+| --- | --- |
+| id | int |
+| TournamentName | nvarchar(200) |
+| EntryFee | money |
+| Active | bit |
+
+```sql
+CREATE TABLE [dbo].[Tournaments](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[TournamentName] [nvarchar](200) NOT NULL,
+	[EntryFee] [money] NOT NULL,
+	[Active] [bit] NOT NULL,
+ CONSTRAINT [PK_Tournaments] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+```
+
+#### TournamentPrizes Table
+
+```sql
+CREATE TABLE [dbo].[TournamentPrizes](
+	[id] [int] NOT NULL,
+	[TournamentId] [int] NOT NULL,
+	[PrizeId] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_TournamentPrizes] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+```
+
+#### TournamentEntries Table
+
+```sql
+CREATE TABLE [dbo].[TournamentEntries](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[TournamentId] [int] NOT NULL,
+	[TeamId] [int] NOT NULL,
+ CONSTRAINT [PK_TournamentEntries] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+```
