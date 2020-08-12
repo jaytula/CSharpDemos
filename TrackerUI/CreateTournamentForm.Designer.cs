@@ -30,7 +30,7 @@
         {
             this.headerLabel = new System.Windows.Forms.Label();
             this.tournamentNameLabel = new System.Windows.Forms.Label();
-            this.tournamentNameValule = new System.Windows.Forms.TextBox();
+            this.tournamentNameValue = new System.Windows.Forms.TextBox();
             this.entryFeeLabel = new System.Windows.Forms.Label();
             this.entryFeeValue = new System.Windows.Forms.TextBox();
             this.selectTeamLabel = new System.Windows.Forms.Label();
@@ -69,12 +69,12 @@
             this.tournamentNameLabel.TabIndex = 1;
             this.tournamentNameLabel.Text = "Tournament Name";
             // 
-            // tournamentNameValule
+            // tournamentNameValue
             // 
-            this.tournamentNameValule.Location = new System.Drawing.Point(34, 139);
-            this.tournamentNameValule.Name = "tournamentNameValule";
-            this.tournamentNameValule.Size = new System.Drawing.Size(330, 35);
-            this.tournamentNameValule.TabIndex = 5;
+            this.tournamentNameValue.Location = new System.Drawing.Point(34, 139);
+            this.tournamentNameValue.Name = "tournamentNameValue";
+            this.tournamentNameValue.Size = new System.Drawing.Size(330, 35);
+            this.tournamentNameValue.TabIndex = 5;
             // 
             // entryFeeLabel
             // 
@@ -264,7 +264,7 @@
             this.Controls.Add(this.selectTeamLabel);
             this.Controls.Add(this.entryFeeValue);
             this.Controls.Add(this.entryFeeLabel);
-            this.Controls.Add(this.tournamentNameValule);
+            this.Controls.Add(this.tournamentNameValue);
             this.Controls.Add(this.tournamentNameLabel);
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -280,7 +280,7 @@
 
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Label tournamentNameLabel;
-        private System.Windows.Forms.TextBox tournamentNameValule;
+        private System.Windows.Forms.TextBox tournamentNameValue;
         private System.Windows.Forms.Label entryFeeLabel;
         private System.Windows.Forms.TextBox entryFeeValue;
         private System.Windows.Forms.Label selectTeamLabel;
