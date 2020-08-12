@@ -79,6 +79,11 @@ namespace TrackerLibrary.DataAccess
             }
         }
 
+        public TournamentModel CreateTournament(TournamentModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<PersonModel> GetPerson_All()
         {
             List<PersonModel> output;

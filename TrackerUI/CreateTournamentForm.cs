@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using TrackerLibrary;
 using TrackerLibrary.Models;
 
@@ -126,6 +127,8 @@ namespace TrackerUI
             tm.TournamentName = tournamentNameValue.Text;
             tm.EntryFee = fee;
 
+            tm.Prizes = selectedPrizes;
+            tm.EnteredTeams = selectedTeams;
             // Create Tournament Entry
             // Create all of the prizes entries
             // Create all of team etnries
