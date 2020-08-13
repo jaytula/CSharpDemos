@@ -373,6 +373,27 @@ CREATE TABLE [dbo].[Tournaments](
 GO
 ```
 
+**Stored Procedure**
+
+```sql
+CREATE PROCEDURE dbo.spTournaments_Insert
+  @TournamentName nvarchar(200),
+  @EntryFee money,
+  @id int = 0 output
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	INSERT INTO dbo.Tournaments (TournamentName, EntryFee, Active) VALUES (@TournamentName, @EntryFee, 1);
+
+	SELECT @id = SCOPE_IDENTITY();
+END
+GO
+```
+
 #### TournamentPrizes Table
 
 ```sql
@@ -388,6 +409,26 @@ CREATE TABLE [dbo].[TournamentPrizes](
 GO
 ```
 
+```sql
+CREATE PROCEDURE dbo.spTournamentPrizes_Insert
+  @TournamentId int,
+  @PrizeId int,
+  @id int = 0 output
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	INSERT INTO dbo.TournamentPrizes (TournamentId, PrizeId) VALUES (@TournamentId, @PrizeId);
+
+	SELECT @id = SCOPE_IDENTITY();
+END
+GO
+```
+
+
 #### TournamentEntries Table
 
 ```sql
@@ -402,3 +443,4 @@ CREATE TABLE [dbo].[TournamentEntries](
 ) ON [PRIMARY]
 GO
 ```
+
