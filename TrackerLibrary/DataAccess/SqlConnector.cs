@@ -71,9 +71,6 @@ namespace TrackerLibrary.DataAccess
                     p = new DynamicParameters();
                     p.Add("@TeamId", model.Id);
                     p.Add("@PersonId", tm.Id);
-
-                    connection.Execute("dbo.spTeamMembers_Insert", p, commandType: CommandType.StoredProcedure);
-
                 }
                 return model;
             }
@@ -99,7 +96,16 @@ namespace TrackerLibrary.DataAccess
                     p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                     connection.Execute("dbo.spTournamentPrizes_Insert", p, commandType: CommandType.StoredProcedure);
+                }
 
+                foreach (TeamModel tm in model.EnteredTeams)
+                {
+                    p = new DynamicParameters();
+                    p.Add("@TournamentId", model.Id);
+                    p.Add("@TeamId", tm.Id);
+                    p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                    connection.Execute("dbo.spTournamentEntries_Insert", p, commandType: CommandType.StoredProcedure);
                 }
                 return model;
             }
