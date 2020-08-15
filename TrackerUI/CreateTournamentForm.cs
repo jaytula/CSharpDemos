@@ -129,11 +129,14 @@ namespace TrackerUI
 
             tm.Prizes = selectedPrizes;
             tm.EnteredTeams = selectedTeams;
+
+            // Wire our matchups
+
             // Create Tournament Entry
             // Create all of the prizes entries
             // Create all of team etnries
+            GlobalConfig.Connection.CreateTournament(tm);
 
-            // Create our matchups
 
         }
     }
