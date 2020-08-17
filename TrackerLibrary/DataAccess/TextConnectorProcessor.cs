@@ -99,7 +99,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
         public static List<TournamentModel> ConvertToTournamentModels(this List<string> lines)
         {
-
+            //id,TournamentName,EntryFee,(id|id|id - Entered Teams),(id|id|id - Prizes),(Rounds - id^id^id|id^id^id|id^id^id)
         }
 
         public static void SaveToPrizeFile(this List<PrizeModel> models, string fileName)
