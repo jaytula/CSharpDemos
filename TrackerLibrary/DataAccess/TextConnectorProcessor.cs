@@ -118,6 +118,14 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                 {
                     tm.EnteredTeams.Add(teams.Where(x => x.Id == int.Parse(id)).First());
                 }
+
+                string[] prizeIds = cols[4].Split('|');
+                foreach (string id in prizeIds)
+                {
+                    tm.Prizes.Add(prizes.Where(x => x.Id == int.Parse(id)).First());
+                }
+
+                // TODO - Capture Rounds information
             }
 
         }
