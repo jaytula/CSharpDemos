@@ -97,11 +97,12 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             return output;
         }
 
-        public static List<TournamentModel> ConvertToTournamentModels(this List<string> lines, string teamFileName, string peopleFileName)
+        public static List<TournamentModel> ConvertToTournamentModels(this List<string> lines, string teamFileName, string peopleFileName, string prizeFileName)
         {
             //id,TournamentName,EntryFee,(id|id|id - Entered Teams),(id|id|id - Prizes),(Rounds - id^id^id|id^id^id|id^id^id)
             List<TournamentModel> output = new List<TournamentModel>();
             List<TeamModel> teams = teamFileName.FullFilePath().LoadFile().ConvertToTeamModels(peopleFileName);
+            List<PrizeModel> prizes = prizeFileName.FullFilePath().LoadFile().ConvertToPrizeModels();
 
             foreach (string line in lines)
             {
@@ -115,7 +116,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                 string[] teamIds = cols[3].Split('|');
                 foreach (string id in teamIds)
                 {
-
+                    tm.EnteredTeams.Add(teams.Where(x => x.Id == int.Parse(id)).First());
                 }
             }
 
