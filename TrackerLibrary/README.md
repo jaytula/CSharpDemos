@@ -459,3 +459,36 @@ BEGIN
 	SELECT @id = SCOPE_IDENTITY();
 END
 ```
+
+#### Matchups table
+
+```sql
+CREATE TABLE [dbo].[Matchups](
+	[id] [int] NOT NULL,
+	[TournamentId] [int] NOT NULL,
+	[WinnerId] [int] NULL,
+	[MatchupRound] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_Matchups] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+```
+
+#### MatchupEntries table
+
+```sql
+CREATE TABLE [dbo].[MatchupEntries](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[MatchupId] [int] NOT NULL,
+	[ParentMatchupId] [int] NULL,
+	[TeamCompetingId] [int] NOT NULL,
+	[Score] [float] NULL,
+ CONSTRAINT [PK_MatchupEntries] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+```
