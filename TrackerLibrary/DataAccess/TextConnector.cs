@@ -91,7 +91,7 @@ namespace TrackerLibrary.DataAccess
 
             tournaments.Add(model);
 
-            teams.SaveToTournamentFile();
+            tournaments.SaveToTournamentFile("");
         }
 
         public List<PersonModel> GetPerson_All()
