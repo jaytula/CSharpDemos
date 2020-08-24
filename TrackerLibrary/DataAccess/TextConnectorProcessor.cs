@@ -177,7 +177,12 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
             foreach (TournamentModel tm in models)
             {
-                lines.Add($"{ tm.Id },{ tm.TournamentName },{ tm.EntryFee },{ "" }");
+                lines.Add($@"{ tm.Id },
+                    { tm.TournamentName },
+                    { tm.EntryFee },
+                    { ConvertTeamListToString(tm.EnteredTeams) },
+                    { ConvertPrizeListToString(tm.Prizes) },
+                    { ""} ");
             }
         }
 
@@ -193,6 +198,25 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             foreach (TeamModel t in teams)
             {
                 output += $"{ t.Id }|";
+            }
+
+            output = output.Substring(0, output.Length - 1);
+
+            return output;
+        }
+
+        private static string ConvertPrizeListToString(List<PrizeModel> prizes)
+        {
+            string output = "";
+
+            if (prizes.Count == 0)
+            {
+                return "";
+            }
+
+            foreach (PrizeModel p in prizes)
+            {
+                output += $"{ p.Id }|";
             }
 
             output = output.Substring(0, output.Length - 1);
