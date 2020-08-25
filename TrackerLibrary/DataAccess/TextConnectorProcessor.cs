@@ -164,7 +164,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             File.WriteAllLines(fileName.FullFilePath(), lines);
         }
 
-        public static void SaveToTournamentFile(this List<TournamentModel> models)
+        public static void SaveToTournamentFile(this List<TournamentModel> models, string fileName)
         {
             // Id = 0
             // TournamentName = 1
@@ -184,6 +184,8 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                     { ConvertPrizeListToString(tm.Prizes) },
                     { ConvertRoundListToString(tm.Rounds) } ");
             }
+
+            File.WriteAllLines(fileName.FullFilePath(), lines);
         }
 
         private static string ConvertRoundListToString(List<List<MatchupModel>> rounds)
