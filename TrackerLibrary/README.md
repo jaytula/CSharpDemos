@@ -483,7 +483,7 @@ CREATE TABLE [dbo].[MatchupEntries](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[MatchupId] [int] NOT NULL,
 	[ParentMatchupId] [int] NULL,
-	[TeamCompetingId] [int] NOT NULL,
+	[TeamCompetingId] [int] NULL,
 	[Score] [float] NULL,
  CONSTRAINT [PK_MatchupEntries] PRIMARY KEY CLUSTERED 
 (
@@ -492,3 +492,5 @@ CREATE TABLE [dbo].[MatchupEntries](
 ) ON [PRIMARY]
 GO
 ```
+
+Tools -> Options -> Designers -> Table and Database Designers -> Prevent saving changings that require table re-recreation
