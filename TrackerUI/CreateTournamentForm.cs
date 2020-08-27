@@ -133,7 +133,8 @@ namespace TrackerUI
             // TODO: Wire our matchups
             // Order our list randomly of teams
             // Check if it is big enough - if not, add in byes
-
+            // Create our first round of matchups
+            // Create every round after that - 8 matchups - 4 matchups - 2 matchups - 1 matchup
 
             // Create Tournament Entry
             // Create all of the prizes entries
