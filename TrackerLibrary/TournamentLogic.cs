@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using TrackerLibrary.Models;
 
@@ -19,7 +20,7 @@ namespace TrackerLibrary
 
         private static List<TeamModel> RandomizeTeamOrder(List<TeamModel> teams)
         {
-
+            return teams.OrderBy(_ => Guid.NewGuid()).ToList();
         }
     }
 }
