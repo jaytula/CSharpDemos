@@ -16,6 +16,12 @@ namespace TrackerLibrary
         public static void CreateRounds(TournamentModel model)
         {
             List<TeamModel> randomizedTeams = RandomizeTeamOrder(model.EnteredTeams);
+            int roudns = FindNumberOfRounds(randomizedTeams);
+        }
+
+        private static int FindNumberOfRounds(List<TeamModel> teams)
+        {
+            int output = 0;
         }
 
         private static List<TeamModel> RandomizeTeamOrder(List<TeamModel> teams)
