@@ -23,9 +23,5 @@ namespace TrackerLibrary.Models
         /// 
         /// </summary>
         /// <param name="initialScore"></param>
-        public MatchupEntryModel(double initialScore)
-        {
-            Console.WriteLine();
-        }
     }
 }
