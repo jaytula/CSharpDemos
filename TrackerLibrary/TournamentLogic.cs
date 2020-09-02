@@ -20,6 +20,13 @@ namespace TrackerLibrary
             int byes = NumberOfByes(rounds, randomizedTeams.Count);
 
             model.Rounds.Add(CreateFirstRound(byes, randomizedTeams));
+
+            CreateOtherRounds(model, rounds);
+        }
+
+        private static void CreateOtherRounds(TournamentModel model, int rounds)
+        {
+            int round = 2;
         }
 
         private static List<MatchupModel> CreateFirstRound(int byes, List<TeamModel> teams)
