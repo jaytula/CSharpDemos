@@ -83,6 +83,7 @@ namespace TrackerLibrary.DataAccess
                 SaveTournament(connection, model);
                 SaveTournamentPrizes(connection, model);
                 SaveTournamentEntries(connection, model);
+                SaveTournamentRounds(connection, model);
             }
         }
 
@@ -121,6 +122,12 @@ namespace TrackerLibrary.DataAccess
 
                 connection.Execute("dbo.spTournamentEntries_Insert", p, commandType: CommandType.StoredProcedure);
             }
+        }
+
+        private void SaveTournamentRounds(IDbConnection connection, TournamentModel model)
+        {
+            // List<List<MatchModel>> Rounds
+            // List<MatchupEntryModel> Entries
         }
 
         public List<PersonModel> GetPerson_All()
