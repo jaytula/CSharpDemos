@@ -133,6 +133,14 @@ namespace TrackerLibrary.DataAccess
             // Loop through the matchups
             // Save the matchup
             // Loop through the entries and save them
+
+            foreach (List<MatchupModel> round in model.Rounds)
+            {
+                foreach (MatchupModel item in round)
+                {
+
+                }
+            }
         }
 
         public List<PersonModel> GetPerson_All()
