@@ -128,6 +128,11 @@ namespace TrackerLibrary.DataAccess
         {
             // List<List<MatchModel>> Rounds
             // List<MatchupEntryModel> Entries
+
+            // Loop through the rounds
+            // Loop through the matchups
+            // Save the matchup
+            // Loop through the entries and save them
         }
 
         public List<PersonModel> GetPerson_All()
