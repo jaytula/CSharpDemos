@@ -494,3 +494,22 @@ GO
 ```
 
 Tools -> Options -> Designers -> Table and Database Designers -> Prevent saving changings that require table re-recreation
+
+### Matchup Insert Procedure
+
+```sql
+CREATE PROCEDURE dbo.spMatchups_Insert
+    @TournamentId int,
+	@MatchupRound int,
+	@Id int = 0 output
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	INSERT INTO db.Matchups (TournamentId, MatchupRound) VALUES (@TournamentId, @MatchupRound);
+
+	SELECT @Id = SCOPE_IDENTITY();
+END
+GO
+```

@@ -138,7 +138,8 @@ namespace TrackerLibrary.DataAccess
             {
                 foreach (MatchupModel item in round)
                 {
-
+                    var p = new DynamicParameters();
+                    connection.Execute("dbo.spMatchups_Insert", p, commandType: CommandType.StoredProcedure);
                 }
             }
         }
