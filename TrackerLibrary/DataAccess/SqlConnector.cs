@@ -149,12 +149,12 @@ namespace TrackerLibrary.DataAccess
 
                     foreach (MatchupEntryModel entry in matchup.Entries)
                     {
-                        var p = new DynamicParameters();
+                        p = new DynamicParameters();
                         //p.Add("@TournamentId", model.Id);
                         //p.Add("@MatchupRound", matchup.MatchupRound);
                         //p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
-                        //connection.Execute("dbo.spMatchups_Insert", p, commandType: CommandType.StoredProcedure);
+                        //connection.Execute("dbo.spMatchupEntries_Insert", p, commandType: CommandType.StoredProcedure);
                     }
                 }
             }
